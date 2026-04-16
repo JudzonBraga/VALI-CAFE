@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>VELI CAFÉ | Café de Alta Gama - Lima, Perú</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    </head>
+
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">VELI CAFÉ</div>
+        <div class="nav-links">
+            <a href="#home">INICIO</a>
+            <a href="#products">COLECCIÓN</a>
+            <a href="#atelier">EXPERIENCIA</a>
+            <a href="#sede-san-isidro">SEDES</a>
+            <a href="#testimonials">CLIENTES</a>
+            <a href="#contact">CONTACTO</a>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR CON SCROLL SNAPPING -->
+    <div class="scroll-container">
+        <!-- HERO -->
+        <section id="home" class="scroll-section hero">
+            <video class="hero-video-bg" autoplay muted loop playsinline
+                poster="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg">
+                <source src="https://cdn.pixabay.com/video/2025/04/19/272870_large.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1 class="fade-up">VELI CAFÉ</h1>
+                <p class="fade-up" style="transition-delay: 0.1s;">L'ART DE DÉGUSTER — EL ARTE DE DEGUSTAR</p>
+                <button class="btn-luxury fade-up" id="exploreBtn" style="transition-delay: 0.2s;">DESCUBRIR
+                    COLECCIÓN</button>
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="products" class="scroll-section section">
+            <div class="container">
+                <span class="section-title fade-left">EDICIÓN <span class="gold-text">LIMITADA</span></span>
+                <div class="divider fade-left" style="transition-delay: 0.1s;"></div>
+                <p class="fade-left" style="max-width: 600px; margin-bottom: 2rem; transition-delay: 0.2s;">Granos de
+                    origen único, tostados en micro-lotes en
+                    nuestro taller de Lima. Una experiencia de cata exclusiva para paladares exigentes.</p>
+                <div class="products-grid" id="productsGrid"></div>
+            </div>
+        </section>
+
+        <!-- ATELIER -->
+        <section id="atelier" class="scroll-section section">
+            <div class="container">
+                <div class="atelier">
+                    <div class="atelier-img scale-in"></div>
+                    <div class="atelier-text">
+                        <h2 class="section-title fade-right" style="font-size: 2.8rem;">SUR MESURE <span
+                                style="font-size:1.2rem;">(A TU MEDIDA)</span></h2>
+                        <div class="divider fade-right" style="transition-delay: 0.1s;"></div>
+                        <p class="fade-right" style="line-height: 1.6; margin: 1.5rem 0; transition-delay: 0.2s;">Cada
+                            taza es una obra maestra. Nuestro equipo de
+                            baristas trabaja con métodos de extracción de precisión, similar a la ingeniería de un
+                            hiperdeportivo. Selección de granos, temperatura exacta y una copa que despierta los
+                            sentidos. En VELI, el lujo se sirve gota a gota.</p>
+                        <button class="btn-luxury fade-right" id="reserveAtelier"
+                            style="transition-delay: 0.3s;">RESERVAR EXPERIENCIA PRIVADA</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEDES -->
+        <section id="sede-san-isidro" class="scroll-section sedes-section">
+            <div class="sedes-container">
+                <!-- SEDE 1: SAN ISIDRO -->
+                <div class="sede-block">
+                    <div class="sede-text">
+                        <div class="sede-tag fade-up">━ SEDE CORPORATIVA</div>
+                        <h2 class="fade-up" style="transition-delay: 0.1s;">VELI <span>SAN ISIDRO</span></h2>
+                        <p class="sede-desc fade-up" style="transition-delay: 0.2s;">Nuestra sede principal, ubicada en
+                            el corazón financiero de Lima. Un
+                            espacio donde la precisión y la excelencia se encuentran. Diseñado para el conocedor que
+                            busca la experiencia definitiva.</p>
+                        <div class="sede-values fade-up" style="transition-delay: 0.3s;">
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-gem"></i></div>
+                                <div class="value-text"><strong>Exclusividad</strong>
+                                    <p>Acceso preferencial a ediciones limitadas</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-microphone-alt"></i></div>
+                                <div class="value-text"><strong>Catas privadas</strong>
+                                    <p>Con baristas certificados internacionalmente</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-wine-glass-alt"></i></div>
+                                <div class="value-text"><strong>Maridaje exclusivo</strong>
+                                    <p>Selección de pastelería de autor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sede-horario-bugatti fade-up" style="transition-delay: 0.4s;">
+                            <div class="horario-item"><i class="far fa-clock"></i> Lun a Sáb: 8:00 - 22:00</div>
+                            <div class="horario-item"><i class="far fa-calendar-alt"></i> Dom: 9:00 - 18:00</div>
+                            <div class="horario-item"><i class="fas fa-map-marker-alt"></i> Av. Conquistadores 789</div>
+                        </div>
+                    </div>
+                    <div class="sede-image scale-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(212, 175, 55, 0.3)), 
+                        url(https://cdn.pixabay.com/photo/2017/08/06/13/05/people-2592341_1280.jpg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEDE 2: MIRAFLORES -->
+        <section id="sede-san-isidro" class="scroll-section sedes-section">
+            <div class="sedes-container">
+                <div class="sede-block">
+                    <div class="sede-text">
+                        <div class="sede-tag fade-up">━ SEDE ART DISTRICT</div>
+                        <h2 class="fade-up" style="transition-delay: 0.1s;">VELI <span>MIRAFLORES</span></h2>
+                        <p class="sede-desc fade-up" style="transition-delay: 0.2s;">En el vibrante distrito de
+                            Miraflores, nuestra sede combina el arte
+                            contemporáneo con la alta cultura del café. Un espacio abierto a creadores y conocedores.
+                        </p>
+                        <div class="sede-values fade-up" style="transition-delay: 0.3s;">
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-palette"></i></div>
+                                <div class="value-text"><strong>Galería de arte</strong>
+                                    <p>Exposiciones rotativas de artistas locales</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-music"></i></div>
+                                <div class="value-text"><strong>Jazz en vivo</strong>
+                                    <p>Viernes y sábados por la noche</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-book"></i></div>
+                                <div class="value-text"><strong>Biblioteca del café</strong>
+                                    <p>Más de 500 volúmenes especializados</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sede-horario-bugatti fade-up" style="transition-delay: 0.4s;">
+                            <div class="horario-item"><i class="far fa-clock"></i> Lun a Dom: 7:30 - 23:00</div>
+                            <div class="horario-item"><i class="fas fa-map-marker-alt"></i> Calle de los Artistas 345
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sede-image scale-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(212, 175, 55, 0.3)), 
+                        url(https://cdn.pixabay.com/photo/2023/11/10/09/27/coffee-8379014_1280.jpg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEDE 3: BARRANCO -->
+        <section id="sede-san-isidro" class="scroll-section sedes-section">
+            <div class="sedes-container">
+                <div class="sede-block">
+                    <div class="sede-text">
+                        <div class="sede-tag fade-up">━ SEDE BOHEMIA</div>
+                        <h2 class="fade-up" style="transition-delay: 0.1s;">VELI <span>BARRANCO</span></h2>
+                        <p class="sede-desc fade-up" style="transition-delay: 0.2s;">En el corazón bohemio de
+                            Lima,
+                            nuestra sede captura la esencia del Barranco
+                            tradicional con un toque de vanguardia. Atmósfera íntima y vistas al mar.</p>
+                        <div class="sede-values fade-up" style="transition-delay: 0.3s;">
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-mug-hot"></i></div>
+                                <div class="value-text"><strong>Cold brew bar</strong>
+                                    <p>Especialidades en extracción fría</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-moon"></i></div>
+                                <div class="value-text"><strong>Noches de poesía</strong>
+                                    <p>Recitales mensuales</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon"><i class="fas fa-eye"></i></div>
+                                <div class="value-text"><strong>Mirador exclusivo</strong>
+                                    <p>Vista panorámica al océano</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sede-horario-bugatti fade-up" style="transition-delay: 0.4s;">
+                            <div class="horario-item"><i class="far fa-clock"></i> Mar a Dom: 9:00 - 20:00</div>
+                            <div class="horario-item"><i class="fas fa-map-marker-alt"></i> Bajada de Baños 123
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sede-image scale-in" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(212, 175, 55, 0.3)), 
+                    url(https://cdn.pixabay.com/photo/2017/06/05/16/01/coffee-2374466_1280.jpg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonials" class="scroll-section section">
+            <div class="container">
+                <span class="section-title fade-left">CONOCEDORES <span class="gold-text">OPINAN</span></span>
+                <div class="divider fade-left" style="transition-delay: 0.1s;"></div>
+                <div class="testimonial-grid" id="testimonialsGrid"></div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact" class="scroll-section">
+            <video class="hero-video-bg" autoplay muted loop playsinline
+                poster="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg">
+                <source src="https://cdn.pixabay.com/video/2026/02/12/334265_large.mp4" type="video/mp4">
+            </video>
+            <div class="container">
+                <span class="section-title fade-up">NEWSLETTER <span class="gold-text">EXCLUSIVA</span></span>
+                <div class="divider fade-up" style="margin: 1rem auto; transition-delay: 0.1s;"></div>
+                <p class="fade-up" style="max-width: 500px; margin: 0 auto 2rem; transition-delay: 0.2s;">Acceda
+                    a
+                    catas
+                    privadas y lanzamientos antes que
+                    nadie. Sea parte del círculo VELI.</p>
+                <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <input type="email" id="luxuryEmail" placeholder="tu@email.com" class="fade-right"
+                        style="background: #111; border: 1px solid #d4af37; padding: 1rem 2rem; width: 300px; color: #fff; transition-delay: 0.1s;">
+                    <button id="luxurySubscribe" class="btn-luxury fade-right"
+                        style="transition-delay: 0.2s;">SUSCRIBIRME</button>
+                </div>
+                <p id="formFeedback" style="margin-top: 1.5rem; font-size: 0.8rem;"></p>
+            </div>
+        </section>
+
+        <!-- FOOTER - DENTRO DEL SCROLL CONTAINER PERO SIN SNAP -->
+        <footer>
+            <div class="logo fade-up" style="font-size: 1.8rem; margin-bottom: 1rem;">VELI CAFÉ</div>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin: 1rem 0;">
+                <a href="instagram.com" class="fade-up" style="transition-delay: 0.1s;"><i class="fab fa-instagram"
+                        style="font-size: 1.4rem; color: #d4af37; cursor: pointer;"></i></a>
+                <a href="x.com" class="fade-up" style="transition-delay: 0.2s;"><i class="fab fa-x"
+                        style="font-size: 1.4rem; color: #d4af37; cursor: pointer;"></i></a>
+                <a href="youtube.com" class="fade-up" style="transition-delay: 0.3s;"><i class="fab fa-youtube"
+                        style="font-size: 1.4rem; color: #d4af37; cursor: pointer;"></i></a>
+            </div>
+            <p class="fade-up" style="transition-delay: 0.4s;">&copy; 2026 
+              <a href="https://judzonbraga.github.io/HOME/" style="text-decoration:none; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem;">IUXON.COM </a>
+              | Todos los derechos reservados | Lima, Perú</p>
+        </footer>
+    </div>
+    </body>
+
+</html>
