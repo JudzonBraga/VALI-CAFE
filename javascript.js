@@ -1,5 +1,34 @@
 gsap.registerPlugin(ScrollTrigger);
 
+        // ========== MENÚ HAMBURGUESA ==========
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinksMenu = document.getElementById('navLinks');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinksMenu.classList.toggle('active');
+                // Cambiar icono
+                const icon = menuToggle.querySelector('i');
+                if (navLinksMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Cerrar menú al hacer click en un link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
         // ========== ANIMACIONES CON INTERSECTION OBSERVER ==========
         const observerOptions = {
             threshold: 0.2,
@@ -19,7 +48,7 @@ gsap.registerPlugin(ScrollTrigger);
             observer.observe(el);
         });
 
-        // ========== ANIMACIÓN ESPECIAL PARA TARJETAS DE PRODUCTOS ==========
+        // ========== ANIMACIÓN PARA TARJETAS DE PRODUCTOS ==========
         const productObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -32,7 +61,7 @@ gsap.registerPlugin(ScrollTrigger);
             });
         }, { threshold: 0.2 });
 
-        // ========== ANIMACIÓN ESPECIAL PARA TARJETAS DE TESTIMONIOS ==========
+        // ========== ANIMACIÓN PARA TARJETAS DE TESTIMONIOS ==========
         const testimonialObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -69,9 +98,9 @@ gsap.registerPlugin(ScrollTrigger);
                 link.classList.remove('active');
                 const href = link.getAttribute('href').substring(1);
 
-                // Si estamos en cualquier sede (ids que empiezan con "sede-"), marcar "SEDES"
-                if (currentSection.startsWith('sede-')) {
-                    if (href === 'sedes') {
+                // Si estamos en cualquier sede, marcar "SEDES"
+                if (currentSection && (currentSection.startsWith('sede-'))) {
+                    if (href === 'sede-san-isidro' || href === 'sede-miraflores' || href === 'sede-barranco') {
                         link.classList.add('active');
                     }
                 } else if (href === currentSection) {
@@ -204,7 +233,6 @@ gsap.registerPlugin(ScrollTrigger);
             }
             setTimeout(() => fb.innerHTML = '', 3000);
         });
-
 
         // ========== SCROLL EN CONTAINER PARA NAVBAR ACTIVO ==========
         const scrollContainer = document.querySelector('.scroll-container');
